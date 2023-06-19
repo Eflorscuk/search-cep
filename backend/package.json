@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "\"Este e um projeto com finalidade de testar as habilidades de seu criador\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "JS",
+    "Node",
+    "Express"
+  ],
+  "author": "Evandro Florscuk",
+  "license": "ISC"
+}
