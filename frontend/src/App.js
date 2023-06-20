@@ -5,15 +5,16 @@ import Footer from './components/layout/Footer'
 import Container from './components/layout/Container'
 
 import Home from './components/pages/Home'
+import SearchNumber from './components/pages/SearchNumber'
 
 const App = _ => {
   return (
     <Router>
-      <Navbar></Navbar>
-        <Container>
-          <Home></Home>
+      <Navbar />
+        <Container customClass="min-height">
           <Routes>
-            <Route></Route>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/seachcepnumber" element={<SearchNumber />} />
           </Routes>
         </Container>
       <Footer></Footer>
