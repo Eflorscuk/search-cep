@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS endereco (
+    cep VARCHAR(10) PRIMARY KEY,
+    logradouro VARCHAR(100) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    estado VARCHAR(50) NOT NULL
+);
