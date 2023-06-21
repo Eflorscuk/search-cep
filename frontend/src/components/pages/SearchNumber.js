@@ -14,12 +14,12 @@ const SearchNumber = () => {
         setError('')
 
         axios
-            .get(`https://viacep.com.br/ws/${cep}/json/`)
-            //.get(`/search/${cep}`)
+            .get(`http://localhost:8084/searchCEPnumber/${cep}`)
             .then((response) => {
-            setData(response.data);
-            setIsLoading(false);
-        })
+                setData(response.data)
+                console.log(response)
+                setIsLoading(false)
+            })
             .catch((error) => {
                 setError('Ocorreu um erro ao obter os dados do CEP.');
                 setIsLoading(false);
