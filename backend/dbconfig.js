@@ -1,18 +1,13 @@
 const Sequelize = require("sequelize")
 const sequelize = new Sequelize(
     'searchcep',
-    'root',
-    'root',
+    'admin',
+    '1234',
     {
         host: 'localhost',
         dialect: 'mysql',
-        password: 'root'
+        password: '1234'
     }
 )
 
-
-sequelize.authenticate().then(() => {
-   console.log('Sequelize => Conectado com sucesso.');
-}).catch((error) => {
-   console.error('Sequelize => Problema para conectar com o DB: ', error);
-});
+module.exports = sequelize
