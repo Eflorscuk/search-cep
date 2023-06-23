@@ -1,3 +1,5 @@
+const Endereco = require('../models/enderecoModel')
+
 const inserirEndereco = async(data) => {
     try {
         const novoEndereco = {
