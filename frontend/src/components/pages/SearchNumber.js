@@ -57,13 +57,13 @@ const SearchNumber = () => {
                 ) : error ? (
                     <p>{error}</p>
                 ) : data ? (
-                    <div>
+                    <div className={styles.resposta}>
                         <h2>Informações do CEP:</h2>
                         <p>CEP: {data.cep}</p>
                         <p>Logradouro: {data.logradouro}</p>
                         <p>Bairro: {data.bairro}</p>
-                        <p>Cidade: {data.localidade}</p>
-                        <p>Estado: {data.uf}</p>
+                        <p>Cidade: {data.cidade}</p>
+                        <p>Estado: {data.estado}</p>
                     </div>
                 ) : null}
         </div>        

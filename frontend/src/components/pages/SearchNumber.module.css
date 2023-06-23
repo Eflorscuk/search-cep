@@ -72,3 +72,8 @@ h1 {
     top: 0;
     left: 0;
 }
+
+.resposta {
+    padding: 10px;
+    font-size: 14px;
+}
