@@ -15,3 +15,6 @@ CREATE TABLE IF NOT EXISTS endereco (
     estado VARCHAR(50) NOT NULL,
     PRIMARY KEY (id)
 );
+
+INSERT INTO endereco (cep, logradouro, bairro, cidade, estado)
+VALUES ('82100-240', 'Rua Gardênio Scorzato', 'Pilarzinho', 'Curitiba', 'PR');

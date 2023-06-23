@@ -1,7 +1,7 @@
-import { Sequelize } from "sequelize"
-import db from "../dbconfig"
+const { Sequelize } = require('sequelize')
+const db = require('../../dbconfig') 
 
-export default db.define("client", {
+module.exports = db.define("endereco", {
     id: {
         type: Sequelize.INTEGER.UNSIGNED,
         primaryKey: true,
