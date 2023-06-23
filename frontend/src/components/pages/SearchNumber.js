@@ -37,7 +37,7 @@ const SearchNumber = () => {
 
     return (
         <div className={styles.formCard}>
-            <h1>Digite o número do CEP para consulta</h1>
+            <h1>Consulte o CEP:</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Digite o CEP:
