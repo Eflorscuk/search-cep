@@ -1,5 +1,5 @@
 const express = require('express')
-const {findCEPnumber} = require('../controller/clients')
+const {findCEPnumber} = require('../controller/enderecos')
 
 const router = express.Router()
 
