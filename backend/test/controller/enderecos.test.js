@@ -23,4 +23,26 @@ describe('findCEPnumber', () => {
 
         expect(res.json).toHaveBeenCalledWith(enderecoMock)
     })
+
+    test('deve inserir o endereco se nao estiver cadastrado', async () => {
+        const req = { params: { cep: '123456789' } }
+        const res = { json: jest.fn() }
+        const enderecoMock = { cep: '12345678', rua: 'Rua Teste', cidade: 'Cidade Teste' }
+        const axiosResponseMock = { data: enderecoMock }
+
+        Endereco.findOne.mockResolvedValueOnce(null)
+
+        axios.get.mockResolvedValueOnce(axiosResponseMock)
+
+        await findCEPnumber(req, res)
+
+        expect(inserirEndereco).toHaveBeenCalledWith(enderecoMock)
+        expect(res.json).toHaveBeenCalledWith(enderecoMock)        
+    })
+
+    test('deve retornar erro do servidoer em caso de excecao', async () => {
+        const req = { params: { cep: '12345678' } }
+        const res = { status: jest.fn().mockReturnThis(), json: jest.fn() }
+        const errorMock = new Error('Erro do Servidor')
+    })
 })
