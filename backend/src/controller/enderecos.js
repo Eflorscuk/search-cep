@@ -19,6 +19,7 @@ const findCEPnumber = async (req, res) => {
             if(data.erro) {
                 data = {}
             }
+            console.log(`===> `, data)
             res.json(data)
         }
     }catch(error) {
