@@ -12,11 +12,15 @@ input {
     margin-top: 5%;
     position: relative;
     width: 350px;
-    height: 500px;
+    height: 350px;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     background: #ecf0f3;
+}
+
+.formCard.expanded {
+    height: 400px;
 }
 
 label, input, button {
@@ -76,4 +80,11 @@ h1 {
 .resposta {
     padding: 10px;
     font-size: 14px;
+}
+
+.spinner {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

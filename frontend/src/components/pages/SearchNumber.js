@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styles from "./SearchNumber.module.css"
 import axios from "axios"
+import { TailSpin } from "react-loader-spinner";
 
 const SearchNumber = () => {
     const [cep, setCep] = useState('')
@@ -36,7 +37,7 @@ const SearchNumber = () => {
     }
 
     return (
-        <div className={styles.formCard}>
+        <div className={`${styles.formCard} ${data || error ? styles.expanded : ""}`}>
             <h1>Consulte o CEP:</h1>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -53,7 +54,9 @@ const SearchNumber = () => {
             </form>
 
             {isLoading ? (
-                <p>Carregando...</p>
+                <div className={styles.spinner}>
+                    <TailSpin color="#00BFFF" height={50} width={50} />
+                </div>
                 ) : error ? (
                     <p>{error}</p>
                 ) : data ? (
