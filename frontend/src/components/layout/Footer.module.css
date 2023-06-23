@@ -1,12 +1,15 @@
 .footer {
     background-color: #05445E;
     color: #B1D4E0;
-    padding: 3em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
 }
 
 .copy_right {
     margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .copy_right span {

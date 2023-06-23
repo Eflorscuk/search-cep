@@ -27,16 +27,26 @@ const SearchNumber = () => {
         });
     }
 
+    const handleInputChange = event => {
+        const enteredValue = event.target.value;
+
+        if (enteredValue.length <= 8) {
+            setCep(enteredValue);
+        }
+    }
+
     return (
-        <div className={styles.form}>
+        <div className={styles.formCard}>
             <h1>Digite o número do CEP para consulta</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Digite o CEP:
                     <input 
-                        type="text"
+                        type="number"
                         value={cep}
-                        onChange={event => setCep(event.target.value)}
+                        onChange={handleInputChange}
+                        placeholder="00000000"
+                        className={styles.meuInput}
                     />
                 </label>
                 <button type="submit">Buscar</button>
@@ -60,4 +70,4 @@ const SearchNumber = () => {
     )
 }
 
-export default SearchNumber
+export default SearchNumber;

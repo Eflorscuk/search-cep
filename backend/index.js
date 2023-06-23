@@ -2,7 +2,6 @@ const express = require('express')
 const db = require('./dbconfig')
 const searchCEPnumber = require('./src/routes/user')
 const cors = require('cors')
-const redis = require('redis')
 
 const app = express()
 

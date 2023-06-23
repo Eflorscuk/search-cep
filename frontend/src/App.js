@@ -17,7 +17,7 @@ const App = _ => {
             <Route path="/seachcepnumber" element={<SearchNumber />} />
           </Routes>
         </Container>
-      <Footer></Footer>
+        <Footer></Footer>
     </Router>
   )
 }
