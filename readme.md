@@ -23,4 +23,4 @@ Para consultar o CEP, basta o usuário clicar no botão "Encontre seu CEP pelo n
 ## Futuro
 Pretento criar um Dockerfile para cada serviço e, por fim, executá-los com Docker-compose. 
 
-Também quero aprimorar o sistema para fazer buscas através do endereço. Assim como, ampliar os testes do sistema.
+Também, quero aprimorar o sistema para fazer buscas através do endereço. Assim como, ampliar os testes do sistema.
