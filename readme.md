@@ -19,3 +19,8 @@ Para executar o presente projeto basta seguir o README.md contido em cada pasta 
 
 ## Funcionalidades
 Para consultar o CEP, basta o usuário clicar no botão "Encontre seu CEP pelo número" e, na tela seguinte, basta digitar o CEP desejado na caixa de texto e clicar no botão "Buscar".
+
+## Futuro
+Pretento criar um Dockerfile para cada serviço e, por fim, executá-los com Docker-compose. 
+
+Também quero aprimorar o sistema para fazer buscas através do endereço. Assim como, ampliar os testes do sistema.
