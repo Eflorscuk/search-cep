@@ -1,5 +1,5 @@
-const inserirEndereco = require('../src/services/inserirEndereco')
-const Endereco = require('../src/models/enderecoModel')
+const inserirEndereco = require('../../src/services/inserirEndereco')
+const Endereco = require('../../src/models/enderecoModel')
 
 test('deve criar um novo endereço corretamente', async () => {
     // Arrange
