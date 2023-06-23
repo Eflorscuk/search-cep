@@ -6,8 +6,6 @@ const stringCEP = require("../services/stringCEP")
 const findCEPnumber = async (req, res) => {
     try{
         const cep = req.params.cep
-    /*let posicaoInsercao = 5
-        let cephifen = cep.slice(0, posicaoInsercao) + "-" + cep.slice(posicaoInsercao)*/
         const result = stringCEP(cep)
         const endereco = await Endereco.findOne({ where: { cep: result }})
         if(endereco) {
@@ -16,7 +14,7 @@ const findCEPnumber = async (req, res) => {
         } else {
             console.log(`===> Fui pelo ELSE`)
             const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
-            const data = response.data
+            let data = response.data
             inserirEndereco(data)
             if(data.erro) {
                 data = {}
@@ -24,7 +22,7 @@ const findCEPnumber = async (req, res) => {
             res.json(data)
         }
     }catch(error) {
-        console.error(error);
+        console.log(error);
         res.status(500).json({ error: 'Erro do Servidor' })
     }
 }
