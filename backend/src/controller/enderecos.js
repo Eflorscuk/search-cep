@@ -15,6 +15,9 @@ const findCEPnumber = async (req, res) => {
             const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
             const data = response.data
             inserirEndereco(data)
+            if(data.erro) {
+                data = {}
+            }
             res.json(data)
         }
     }catch(error) {

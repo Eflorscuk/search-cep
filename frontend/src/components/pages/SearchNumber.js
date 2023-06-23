@@ -57,7 +57,7 @@ const SearchNumber = () => {
                 <div className={styles.spinner}>
                     <TailSpin color="#00BFFF" height={50} width={50} />
                 </div>
-                ) : error ? (
+                ) : error || data === {} ? (
                     <p>{error}</p>
                 ) : data ? (
                     <div className={styles.resposta}>
@@ -68,7 +68,8 @@ const SearchNumber = () => {
                         <p>Cidade: {data.cidade}</p>
                         <p>Estado: {data.estado}</p>
                     </div>
-                ) : null}
+                )
+                :null}
         </div>        
     )
 }
