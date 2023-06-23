@@ -11,8 +11,9 @@ const inserirEndereco = async(data) => {
         const enderecoCriado = await Endereco.create(novoEndereco)
         return enderecoCriado
     } catch(error) {
-        console.error('error ===> ', error)
+        console.log('error ===> ', error)
+        return error
     }
 }
 
-module.export = inserirEndereco
+module.exports = inserirEndereco
